@@ -1,0 +1,228 @@
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git pull https://github.com/PrakashRoy-2020/git-jul20-work.git
+From https://github.com/PrakashRoy-2020/git-jul20-work
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git branch
+  branch1
+  branch2
+* master
+  newbranch
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ ls
+index.html  README.md
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ code README.md
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git add .
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git commit -m "add h3 head in README"
+[master 4c1cdfb] add h3 head in README
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git push -u master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 703 bytes | 351.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PrakashRoy-2020/git-jul20-work.git
+   f96dfd7..4c1cdfb  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git checkout newbranch
+Switched to branch 'newbranch'
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ ls
+README.md
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ code index.css
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ git add .
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ git commit -m "add a new css file"
+[newbranch 469993b] add a new css file
+ 1 file changed, 4 insertions(+)
+ create mode 100644 index.css
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ code index.txt
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git add .
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git commit -m "add new .txt file"
+[master f577d04] add new .txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.txt
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git checkout newbranch
+Switched to branch 'newbranch'
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ code index.css
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ git add .
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ git commit -m "add a class in css file"
+[newbranch 3571308] add a class in css file
+ 1 file changed, 4 insertions(+)
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ git status
+On branch newbranch
+nothing to commit, working tree clean
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (newbranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git merge newbranch
+Merge made by the 'recursive' strategy.
+ index.css | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 index.css
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git reset --hard HEAD~1
+HEAD is now at f577d04 add new .txt file
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ code README.md
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git reflog
+f577d04 (HEAD -> master) HEAD@{0}: reset: moving to HEAD~1
+1f73ec3 HEAD@{1}: merge newbranch: Merge made by the 'recursive' strategy.
+f577d04 (HEAD -> master) HEAD@{2}: checkout: moving from newbranch to master
+3571308 (newbranch) HEAD@{3}: commit: add a class in css file
+469993b HEAD@{4}: checkout: moving from master to newbranch
+f577d04 (HEAD -> master) HEAD@{5}: commit: add new .txt file
+4c1cdfb (origin/master) HEAD@{6}: checkout: moving from newbranch to master
+469993b HEAD@{7}: commit: add a new css file
+0d600da HEAD@{8}: checkout: moving from master to newbranch
+4c1cdfb (origin/master) HEAD@{9}: commit: add h3 head in README
+4307d6f (branch2, branch1) HEAD@{10}: checkout: moving from branch2 to master
+4307d6f (branch2, branch1) HEAD@{11}: checkout: moving from master to branch2
+4307d6f (branch2, branch1) HEAD@{12}: merge branch1: Fast-forward
+f96dfd7 HEAD@{13}: checkout: moving from branch1 to master
+4307d6f (branch2, branch1) HEAD@{14}: commit: add a table in html file
+f96dfd7 HEAD@{15}: checkout: moving from master to branch1
+f96dfd7 HEAD@{16}: commit: add a new html file
+0d600da HEAD@{17}: checkout: moving from newbranch to master
+0d600da HEAD@{18}: checkout: moving from master to newbranch
+0d600da HEAD@{19}: commit: add new line 2
+b0bd625 HEAD@{20}: commit: add new line
+5f5206c HEAD@{21}: pull https://github.com/PrakashRoy-2020/git-jul20-work.git: Fast-forward
+7cc7dd7 HEAD@{22}: commit (initial): Initial commite
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git log --oneline --graph --decorate
+* f577d04 (HEAD -> master) add new .txt file
+* 4c1cdfb (origin/master) add h3 head in README
+* 4307d6f (branch2, branch1) add a table in html file
+* f96dfd7 add a new html file
+* 0d600da add new line 2
+* b0bd625 add new line
+* 5f5206c Change README.md
+* 7cc7dd7 Initial commite
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git add .
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git commit -m "do nothing"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git log --oneline
+f577d04 (HEAD -> master) add new .txt file
+4c1cdfb (origin/master) add h3 head in README
+4307d6f (branch2, branch1) add a table in html file
+f96dfd7 add a new html file
+0d600da add new line 2
+b0bd625 add new line
+5f5206c Change README.md
+7cc7dd7 Initial commite
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ git log --oneline --graph --decorate
+* f577d04 (HEAD -> master) add new .txt file
+* 4c1cdfb (origin/master) add h3 head in README
+* 4307d6f (branch2, branch1) add a table in html file
+* f96dfd7 add a new html file
+* 0d600da add new line 2
+* b0bd625 add new line
+* 5f5206c Change README.md
+* 7cc7dd7 Initial commite
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ code command.txt
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
+$ ^C
+
+PrakashOP@DESKTOP-VS2R3UQ MINGW64 /d/dotnettraining/day1-14july (master)
